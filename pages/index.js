@@ -24,19 +24,7 @@ export default function Home (props) {
 	
 	const { products,  heroCarousel, posts, postsCategory,featuredproducts} = props || {};
 
-	const responsive = {
-		0: { items: 1 },
-		568: { items: 2 },
-		1024: { items:5 },
-	};
-
 	
-	const items = [
-	
-		
-	];
-	posts.map(( post,index )=>items.push(<Post key={ post.id } index={index} post={ post } />) );
-
 	
 
 	return (
@@ -46,49 +34,13 @@ export default function Home (props) {
 				{/*Hero Carousel*/}
 				<HeroCarousel heroCarousel={heroCarousel}/>
 				
-			<div><a href="registration/register">qrqwr</a></div>	
+	
    
 
-				{/*Categories
-				<div className="product-categories-container container mx-auto my-32 px-4 xl:px-0">
-					<h2 className="mai-title text-3xl text-center mb-5 uppercase"><span className="main-title-inner">Categories</span></h2>
-					<ParentCategoriesBlock productCategories={ productCategories }/>
-</div>*/ }
-			
-				{/*<div>	<Login/></div>*/}
 			
 			<div className="px-4">
-				<div className="products container mx-auto mt-32  ">
-				<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">{postsCategory?.name}</span></h2>
-				
-				
-			
-			
-				 <AliceCarousel
-        mouseTracking
-        items={items}
-        responsive={responsive}
-        controlsStrategy="alternate"
-		disableButtonsControls={true}
-    />
-							
-			
-		
-			</div>
-					{/*Post
-					<div className="products container mx-auto my-32 px-4 ">
-					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">{postsCategory?.name}</span></h2>
-					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
-						{ posts.length ? (
-							posts.map( post => <Post key={ post.id } post={ post }/> )
-						) : '' }
-					</div>
-				</div>*/ }
-					{/*Star*/ }
 			
 				
-					
-				{/*Products*/ }
 				<div className="products container mx-auto my-10  ">
 					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Новинки</span></h2>
 					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4">
