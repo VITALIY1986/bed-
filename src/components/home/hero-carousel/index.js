@@ -57,7 +57,7 @@ const HeroCarousel = ({heroCarousel}) => {
 
     return (
         <>
-        <div className="banner   relative  m-auto slidervh">
+        <div className="banner   relative  m-auto slidervh flex justify-center items-center">
           
                 {
                     heroCarousel.map( ( item, index ) => {
@@ -81,7 +81,7 @@ const HeroCarousel = ({heroCarousel}) => {
                     </button>
             </div>*/}
             
-            <div className="banner-content py-3 opacity-50 px-10  absolute z-10 bottom-0 lg:bottom-10 bg-black ">
+            <div className="banner-content py-6 opacity-50 px-10   z-10  bg-black flex justify-center ">
                 <h2 className="banner-content__title text-base md:text-5xl uppercase text-white">{heroCarousel[activeIndex]?.name}</h2>
                 <p className="banner-content__description text-base md:text-2xl text-white">{heroCarousel[activeIndex]?.description}</p>
               {/* <Link href={`/category/${heroCarousel[activeIndex]?.slug}/`}>
