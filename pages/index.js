@@ -35,37 +35,19 @@ export default function Home (props) {
 				<HeroCarousel heroCarousel={heroCarousel}/>
 				
 	
-   
-
+				
 			
 			<div className="px-4">
 			
 				
 				<div className="products container mx-auto my-10  ">
-					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Новинки</span></h2>
-					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4">
-					{ featuredproducts.length ? (
-							featuredproducts.map( product => <ProductHome key={ product.id } isLoggedIn={isLoggedIn} product={ product }/> )
-						) : '' }
+					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Новини</span></h2>
+					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4">
+					{ posts.map( (post,index) => <Post key={ post.id } index={index} post={ post } /> )}
 					</div>
 				</div>
 				{/*Prodduts*/ }
-				<div className="products container mx-auto my-10  ">
-					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Акции</span></h2>
-					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4">
-						{ products.length ? (
-							products.map( product => <ProductHome key={ product.id } isLoggedIn={isLoggedIn} product={ product }/> )
-						) : '' }
-					</div>
-				</div>
-				<div className="products container mx-auto my-10  ">
-					<h2 className="products-main-title main-title mb-5 text-3xl text-center uppercase"><span className="main-title-inner">Наши Марки</span></h2>
-					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4">
-						{ products.length ? (
-							products.map( product => <ProductHome key={ product.id } isLoggedIn={isLoggedIn} product={ product }/> )
-						) : '' }
-					</div>
-				</div>
+			
 				</div>
 			</Layout>
 		
